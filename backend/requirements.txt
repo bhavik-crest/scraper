@@ -1,6 +1,5 @@
 fastapi
 uvicorn[standard]
-httpx
-python-dotenv
-pydantic
-supabase
+requests
+beautifulsoup4
+lxml
