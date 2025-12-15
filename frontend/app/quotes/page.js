@@ -17,7 +17,7 @@ export default function Home() {
     else setLoading(true)
 
     try {
-      const res = await fetch(`http://localhost:8000/api/quotes?count=${count}`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/quotes?count=${count}`)
       const data = await res.json()
       const quotesWithId = data.quotes.map((q, i) => ({
         id: Date.now() + i,

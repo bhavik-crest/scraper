@@ -16,7 +16,7 @@ export default function Home() {
     else setLoading(true)
 
     try {
-      const res = await fetch(`http://localhost:8000/api/books?count=${count}`)
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/books?count=${count}`)
       const data = await res.json()
       const booksWithId = data.books.map((b, i) => ({
         id: Date.now() + i,
